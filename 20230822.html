@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>時間軸</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+      body {
+        font-family: "Noto Sans TC", sans-serif;
+      }
+
+      .fw-900 {
+        font-weight: 900;
+      }
+
+      .fw-700 {
+        font-weight: 700;
+      }
+
+      .fw-300 {
+        font-weight: 300;
+      }
+
+      .bg-cover {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .timeline-section {
+        position: relative;
+      }
+      .timeline-section::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        /* background-color: #827e7e; */
+        /* 漸層色 */
+        background-image: linear-gradient(
+          180deg,
+          rgba(213, 191, 191, 0.1),
+          rgba(43, 32, 32, 0.9)
+        );
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .timeline-section-pointer {
+        position: relative;
+      }
+      .timeline-section-pointer::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 7px solid #ccc;
+      }
+      .timeline-section-pointer:hover::before {
+        width: 30px;
+        height: 30px;
+        border: 10px solid #d873bb;
+      }
+      @media screen and (max-width: 768px) {
+        .timeline-section::before,
+        .timeline-section-pointer::before {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 text-center">
+          <h4>成員人數</h4>
+          <h2 class="fw-700 counter01">98</h2>
+        </div>
+        <div class="col-4 text-center">
+          <h4>獲獎項目</h4>
+          <h2 class="fw-700 counter02">99</h2>
+        </div>
+        <div class="col-4 text-center">
+          <h4>專業認證</h4>
+          <h2 class="fw-700 counter03">100</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container p-5">
+      <div class="timeline-section">
+        <div class="row align-items-center timeline-section-pointer">
+          <div class="col-md-6 text-center">
+            <div class="mytext">
+              <h2 class="fw-900">可愛的小狗01</h2>
+              <p class="fw-700">
+                犬（學名：Canis lupus
+                familiaris），通稱狗，一種常見的犬科哺乳動物，與狼為同一種動物，生物學分類上是狼的一個亞種。狗是人類最早馴養的一個物種。有人飼養的稱為家犬，無人飼養的狗通常被稱為「野狗」或「流浪狗」，可能對環境與其他生物造成影響，是世界百大外來入侵種之一。狗的壽命最多可超過二十年，平均則為十數年，與貓的平均壽命相近。若無發生意外，平均壽命以小型犬為長。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div
+              class="myimg bg-cover"
+              style="
+                background-image: url(image/sam-moghadam-khamseh-SRzVKw8l_tA-unsplash.jpg);
+                height: 280px;
+              "
+            ></div>
+          </div>
+        </div>
+        <div
+          class="row align-items-center flex-row-reverse timeline-section-pointer"
+        >
+          <div class="col-md-6 text-center">
+            <div class="mytext">
+              <h2 class="fw-900 text-danger">可愛小狗02</h2>
+              <p class="fw-700">
+                狗在與人的長期互動中習得了與人類行為和諧一致的特殊習性，更獲得了靠高澱粉飲食茁壯成長的能力。各種狗的形狀、大小、毛色都有顯著不同。狗可用作陪伴、看家護院、捕獵、放牧、載貨、拉車、警用、軍用、做寵物、幫助身障人士等，因此有「人類的好朋友」這一美譽。此外有些地區也將狗作為食物，例如東亞的朝鮮、韓國、中國部份地區、東南亞的越南、歐洲的瑞士、法國、美國夏威夷等地。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div
+              class="myimg bg-cover"
+              style="
+                background-image: url(image/okeykat-w6elADh_jww-unsplash.jpg);
+                height: 280px;
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="row align-items-center timeline-section-pointer">
+          <div class="col-md-6 text-center">
+            <div class="mytext">
+              <h2 class="fw-900 text-primary">可愛小狗03</h2>
+              <p class="fw-700">
+                犬類能接受的食物種類比人類少，例如牠們對巧克力中的可可鹼的代謝速度比人類慢很多，大量攝入巧克力會使犬發生可可鹼中毒甚至致死。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div
+              class="myimg bg-cover"
+              style="background-image: url(image/005.jpg); height: 280px"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="row align-items-center flex-row-reverse timeline-section-pointer"
+        >
+          <div class="col-md-6 text-center">
+            <div class="mytext">
+              <h2 class="fw-900 text-warning">可愛小狗04</h2>
+              <p class="fw-700">
+                北市大同分局民族路派出所日前接獲轄區民眾報案，發現住家遭不明人士侵入，屋內有翻動痕跡。警方懈調閱監視器查明犯嫌後，由副所長率隊持搜索票搜索竊嫌住家，不僅人贓俱獲，還槓上開花，查獲二級毒品。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div
+              class="myimg bg-cover"
+              style="background-image: url(image/badguy.webp); height: 280px"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script>
+      const counterUp = window.counterUp.default;
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+          if (entry.isIntersecting && !el.classList.contains("is-visible")) {
+            counterUp(el, {
+              duration: 2000,
+              delay: 16,
+            });
+            el.classList.add("is-visible");
+          }
+        });
+      };
+
+      const IO = new IntersectionObserver(callback, { threshold: 1 });
+
+      const el01 = document.querySelector(".counter01");
+      IO.observe(el01);
+      const el02 = document.querySelector(".counter02");
+      IO.observe(el02);
+      const el03 = document.querySelector(".counter03");
+      IO.observe(el03);
+    </script>
+  </body>
+</html>
